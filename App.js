@@ -1,61 +1,105 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView } from "react-native";
 
-export default function App() {
-  return (
-    <ScrollView contentContainerStyle={{flex: 1}}>{/* 
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Hello World</Text>
+export default function App(){
+    return (
+        <View style={styles.mainView}>
+            <SafeAreaView style={styles.header}>
+                    <Text style={styles.headerText}>Exercice 1</Text>
+            </SafeAreaView>
 
-      <Image
-        style={styles.tinyLogo}
-        source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }}
-      />
+            <ScrollView style={styles.scrollView}>
+                <View style={styles.articleContainer}>  
+                    <View style={styles.articleTitleContainer}>
+                        <Text style={styles.articleTitle}>
+                            Lorem ipsum dolor...
+                        </Text>
+                    </View>
+                    <View style={styles.articleTextContainer}>
+                        <Text style={styles.articleText}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor in turpis sagittis molestie. Phasellus sagittis leo nisl, in maximus purus elementum vel. Vestibulum sodales metus dictum erat fringilla egestas. 
+                        </Text>
+                    </View>
+                </View>
 
-        <Button
-          title="Learn More"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        /> */}
+                <View style={styles.articleContainer}>  
+                    <View style={styles.articleTitleContainer}>
+                        <Text style={styles.articleTitle}>
+                            Lorem ipsum dolor...
+                        </Text>
+                    </View>
+                    <View style={styles.articleTextContainer}>
+                        <Text style={styles.articleText}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor in turpis sagittis molestie. Phasellus sagittis leo nisl, in maximus purus elementum vel. Vestibulum sodales metus dictum erat fringilla egestas. 
+                        </Text>
+                    </View>
+                </View>
 
-        <View style={styles.container}>
-          <View style={styles.helloContainer}>
-            <Text style={styles.helloText}>HELLO WORLD</Text>
-          </View>
+                <View style={styles.articleContainer}>  
+                    <View style={styles.articleTitleContainer}>
+                        <Text style={styles.articleTitle}>
+                            Lorem ipsum dolor...
+                        </Text>
+                    </View>
+                    <View style={styles.articleTextContainer}>
+                        <Text style={styles.articleText}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor in turpis sagittis molestie. Phasellus sagittis leo nisl, in maximus purus elementum vel. Vestibulum sodales metus dictum erat fringilla egestas. 
+                        </Text>
+                    </View>
+                </View>
+
+                <View style={styles.articleContainer}>  
+                    <View style={styles.articleTitleContainer}>
+                        <Text style={styles.articleTitle}>
+                            Lorem ipsum dolor...
+                        </Text>
+                    </View>
+                    <View style={styles.articleTextContainer}>
+                        <Text style={styles.articleText}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tortor in turpis sagittis molestie. Phasellus sagittis leo nisl, in maximus purus elementum vel. Vestibulum sodales metus dictum erat fringilla egestas. 
+                        </Text>
+                    </View>
+                </View>
+            </ScrollView>
         </View>
-        
-      <StatusBar style="auto" />
-    </ScrollView>
-  );
+    )
 }
 
 const styles = StyleSheet.create({
-  helloContainer: {
-      width: '100%',
-      backgroundColor: '#104360',
-      paddingVertical: 20,
-      borderBottomLeftRadius: 0,
-      borderTopRightRadius: 30,
-      borderBottomLeftRadius: 30
-  }, 
-  helloText: {
-    fontSize: 46,
-    fontWeight: "900",
-    textAlign: "center",
-    letterSpacing: 5,
-    color: '#fff',
-  },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'grey',
-    padding: 20,
-  },
-  tinyLogo : {
-    width: 100,
-    height: 100
-  }
-});
+    scrollView : {
+        paddingHorizontal: 30
+    },
+    articleContainer :  {
+        
+    },
+    articleTitleContainer :  {
+        borderBottomWidth: 1,
+        borderBottomColor: 'grey',
+        paddingHorizontal: 20,
+        paddingVertical: 20
+    },
+    articleTitle :  {
+        fontSize: 22
+    },
+    articleTextContainer :  {
+        paddingHorizontal: 20,
+        paddingVertical: 20
+    },
+    articleText :  {
+        fontSize: 16
+    },
+    header : {
+        backgroundColor: 'white',
+        borderBottomWidth: 1,
+        borderColor: 'grey',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 100
+    },
+    headerText : {
+        fontSize: 28,
+    },
+    mainView: {
+        flex: 1,
+        backgroundColor: 'white',
+    }
+})
