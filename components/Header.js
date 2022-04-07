@@ -1,13 +1,17 @@
 import { StyleSheet, SafeAreaView, Text } from "react-native";
 
-export default function Header(){
+export default function AppHeader(props){
     return (
-        <SafeAreaView style={styles.header}>
-            <Text style={styles.headerText}>Exercice 1</Text>
+        <SafeAreaView style={[styles.header]}>
+
+            <Text style={[styles.headerText, {
+                color: props.textColor
+            }]}>
+                {props.title}
+                </Text>
         </SafeAreaView>
     )
 }
-
 const styles = StyleSheet.create({
     header : {
         backgroundColor: 'white',

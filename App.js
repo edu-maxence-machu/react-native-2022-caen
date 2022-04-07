@@ -1,25 +1,43 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView } from "react-native";
-import Article from "./components/Article";
-import Header from "./components/Header";
-import TextComponent from "./components/TestComponent";
-export default function App(){
-    return (
-        <View style={styles.mainView}>
-            <Header/>
+import { View, Text, SafeAreaView, StyleSheet, ScrollView, TouchableOpacity  } from "react-native";
+import  AppHeader from './components/Header' 
+import ProductsHistory from "./components/ProductsHistory";
+import ScanButtonView from "./components/ScanButtonView";
 
-            <ScrollView style={styles.scrollView}>
-                <Article/>
-                <Article/>
-                <Article/>
-            </ScrollView>
+export default function App(){
+    function onScanPress(){
+        alert('Coucou tout le monde');
+        // blabla.push({...})
+        // etc...
+    }
+
+    // Arrow function 
+    const onItemPress = () => {
+        alert('Test depuis App');
+        // Sur quel item j'ai cliqué ? 
+    }
+    /*
+    CODE FRONT IC
+    */
+    return (
+        <View style={{flex: 1}}>
+            <AppHeader textColor="orange" title="Yoki" /> 
+            {/* <AppHeader title="React c'est cool" /> 
+            <AppHeader title="Yoshi" /> 
+            <AppHeader title="Carnaval" />  */}
+
+            <ScanButtonView
+                handleScanPress={onScanPress}
+            />
+
+            <ProductsHistory
+                handlePressItem={onItemPress}
+            />
+
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    scrollView : {
-        paddingHorizontal: 30
-    },
     mainView: {
         flex: 1,
         backgroundColor: 'white',
